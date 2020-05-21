@@ -9,6 +9,10 @@ import org.fluentd.logger.FluentLogger;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
 public class FluentdApp {
 
     private static FluentLogger LOG = FluentLogger.getLogger("app", "fluentd", 24224);
@@ -18,7 +22,7 @@ public class FluentdApp {
         data.put("from", "userA");
         data.put("to", "userB");
         LOG.log("follow", data);
-        LOG.close();
+        SpringApplication.run(FluentdApp.class, args);
     }
 
 }
