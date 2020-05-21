@@ -9,9 +9,9 @@ import org.fluentd.logger.FluentLogger;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FileUploaderApp {
+public class FluentdApp {
 
-    private static FluentLogger LOG = FluentLogger.getLogger("app", "fluentd-sbx-v33648.sbx2apps.paasdev.delta.com", 24224);
+    private static FluentLogger LOG = FluentLogger.getLogger("app", "fluentd", 24224);
 
     public static void main(String[] args) {
         Map<String, Object> data = new HashMap<String, Object>();
